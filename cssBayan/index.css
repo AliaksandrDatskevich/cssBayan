@@ -1,5 +1,6 @@
-* {
+html {
   position: static;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -22,13 +23,19 @@ body {
   width: 10%;
 }
 
+h1 {
+  margin: 0.3em;
+  font-size: calc(1em + 1vw);
+}
+
+h3 {
+  margin: 0;
+  font-size: calc(0.5em + 1vw);
+}
+
 hr {
   color: gray;
   width: 100%;
-}
-
-p {
-  margin: 0;
 }
 
 .container {
@@ -42,7 +49,6 @@ p {
 .item-title {
   align-items: center;
   width: 90%;
-  color: rgb(0, 150, 207);
 }
 
 .item-input {
@@ -60,7 +66,6 @@ p {
   transition: max-height 0.7s ease-in-out;
 }
 
-.container:hover .item-body,
 .item-input:checked ~ .item-body {
   max-height: 50em;
   transition: max-height 0.7s ease-in-out;
@@ -69,22 +74,69 @@ p {
 .plus {
   background-image: url(assets/svg/plus.svg);
   background-size: cover;
-  visibility: hidden;
   width: 0.7em;
   height: 0.7em;
   transition: transform 0.5s ease-in-out;
 }
 
-.container:hover .plus,
 .item-input:checked ~ .plus {
   transform: rotate(45deg);
   transition: transform 0.5s ease-in-out;
 }
 
-.center-container:hover .plus {
-  visibility: visible;
+@media (min-width: 800px){
+
+  .left-container {
+    width: 20%;
+  }
+  
+  .center-container {
+    width: 60%;
+  }
+  
+  .right-container {
+    width: 20%;
+  }
 }
 
-.center-container:hover .item-title {
-  color: black;
+@media (min-width: 900px){
+
+  .left-container {
+    width: 30%;
+  }
+  
+  .center-container {
+    width: 40%;
+  }
+  
+  .right-container {
+    width: 30%;
+  }
+
+  .item-title {
+    color: rgb(0, 150, 207);
+  }
+  
+  .plus {
+    visibility: hidden;
+  }
+  
+  .center-container:hover .plus {
+    visibility: visible;
+  }
+  
+  .center-container:hover .item-title {
+    color: black;
+  }
+
+  .container:hover .item-body{
+    max-height: 50em;
+    transition: max-height 0.7s ease-in-out;
+  }
+
+  .container:hover .plus,
+  .item-input:checked ~ .plus {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+  }
 }
