@@ -6,7 +6,6 @@ body {
   display: flex;
   flex-direction: row;
   margin: 0;
-  /* align-items: center; */
 }
 
 .left-container {
@@ -28,6 +27,10 @@ hr {
   width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -37,8 +40,6 @@ hr {
 }
 
 .item-title {
-  /* display: flex;
-  flex-direction: row; */
   align-items: center;
   width: 90%;
   color: rgb(0, 150, 207);
@@ -56,12 +57,13 @@ hr {
   max-height: 0;
   width: 100%;
   object-fit: contain;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.7s ease-in-out;
 }
 
+.container:hover .item-body,
 .item-input:checked ~ .item-body {
   max-height: 50em;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.7s ease-in-out;
 }
 
 .plus {
@@ -73,6 +75,7 @@ hr {
   transition: transform 0.5s ease-in-out;
 }
 
+.container:hover .plus,
 .item-input:checked ~ .plus {
   transform: rotate(45deg);
   transition: transform 0.5s ease-in-out;
