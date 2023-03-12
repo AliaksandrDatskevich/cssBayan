@@ -25,19 +25,12 @@ body {
 
 h1 {
   margin: 0.3em;
-  font-size: calc(1em + 0.5vw);
-}
-
-p {
-  margin: 0.3em;
-  font-size: calc(0.5em + 0.5vw);
-  font-weight: 700;
+  font-size: calc(1.5em + 0.5vw);
 }
 
 hr {
   color: gray;
   width: 100%;
-  margin: 0;
 }
 
 .container {
@@ -51,6 +44,8 @@ hr {
 .item-title {
   align-items: center;
   width: 90%;
+  font-size: calc(0.8em + 0.5vw);
+  font-weight: 700;
 }
 
 .item-input {
