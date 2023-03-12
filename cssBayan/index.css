@@ -63,13 +63,21 @@ hr {
   max-height: 0;
   width: 99%;
   object-fit: contain;
-  transition: max-height 0.7s ease-in-out, margin 0.7s;
+  opacity: 0;
+  transition: 
+    max-height 0.7s ease-in-out,
+    margin 0.7s ease-in-out, 
+    opacity 0.5s ease-in-out;
 }
 
 .item-input:checked ~ .item-body {
   margin: 0.3em;
   max-height: 20em;
-  transition: max-height 0.7s ease-in-out, margin 0.7s;
+  opacity: 1;
+  transition: 
+    max-height 0.7s ease-in-out, 
+    margin 0.7s ease-in-out, 
+    opacity 0.5s ease-in-out;
 }
 
 .plus {
@@ -107,10 +115,15 @@ hr {
 }
 
 @media (hover: hover) {
+
   .item-title {
     color: rgb(0, 150, 207);
   }
   
+  .item-input:checked ~ .item-title {
+    color: black;
+  }
+
   .plus {
     visibility: hidden;
   }
@@ -126,11 +139,23 @@ hr {
   .container:hover .item-body{
     margin: 0.3em;
     max-height: 20em;
-    transition: max-height 0.7s ease-in-out, margin 0.7s;
+    opacity: 1;
+    transition: 
+      max-height 0.7s ease-in-out, 
+      margin 0.7s ease-in-out, 
+      opacity 0.5s ease-in-out;
   }
 
   .container:hover .plus {
     transform: rotate(45deg);
     transition: transform 0.5s ease-in-out;
+  }
+
+  .container:active .item-title {
+    color: rgb(0, 150, 207);
+  }
+
+  .container:active .plus {
+    fill: rgb(0, 150, 207);
   }
 }
