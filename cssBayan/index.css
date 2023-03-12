@@ -10,32 +10,34 @@ body {
 }
 
 .left-container {
-  width: 10%;
+  width: 10vw;
 }
 
 .center-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 80vw;
 }
 
 .right-container {
-  width: 10%;
+  width: 0;
 }
 
 h1 {
   margin: 0.3em;
-  font-size: calc(1em + 1vw);
+  font-size: calc(1em + 0.5vw);
 }
 
-h3 {
-  margin: 0;
-  font-size: calc(0.5em + 1vw);
+p {
+  margin: 0.3em;
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: 700;
 }
 
 hr {
   color: gray;
   width: 100%;
+  margin: 0;
 }
 
 .container {
@@ -67,15 +69,14 @@ hr {
 }
 
 .item-input:checked ~ .item-body {
-  max-height: 50em;
+  max-height: 20em;
   transition: max-height 0.7s ease-in-out;
 }
 
 .plus {
-  background-image: url(assets/svg/plus.svg);
-  background-size: cover;
   width: 0.7em;
   height: 0.7em;
+  margin: calc(0.2em + 0.2vw);
   transition: transform 0.5s ease-in-out;
 }
 
@@ -87,32 +88,26 @@ hr {
 @media (min-width: 800px){
 
   .left-container {
-    width: 20%;
+    width: 20vw;
   }
   
   .center-container {
-    width: 60%;
-  }
-  
-  .right-container {
-    width: 20%;
+    width: 60vw;
   }
 }
 
-@media (min-width: 900px){
+@media (min-width: 1200px){
 
   .left-container {
-    width: 30%;
+    width: 30vw;
   }
   
   .center-container {
-    width: 40%;
+    width: 40vw;
   }
-  
-  .right-container {
-    width: 30%;
-  }
+}
 
+@media (hover: hover) {
   .item-title {
     color: rgb(0, 150, 207);
   }
@@ -130,12 +125,11 @@ hr {
   }
 
   .container:hover .item-body{
-    max-height: 50em;
+    max-height: 20em;
     transition: max-height 0.7s ease-in-out;
   }
 
-  .container:hover .plus,
-  .item-input:checked ~ .plus {
+  .container:hover .plus {
     transform: rotate(45deg);
     transition: transform 0.5s ease-in-out;
   }
