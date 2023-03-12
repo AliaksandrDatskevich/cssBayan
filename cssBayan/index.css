@@ -31,6 +31,7 @@ h1 {
 hr {
   color: gray;
   width: 100%;
+  margin: 0;
 }
 
 .container {
@@ -46,6 +47,7 @@ hr {
   width: 90%;
   font-size: calc(0.8em + 0.5vw);
   font-weight: 700;
+  margin: 0.3em;
 }
 
 .item-input {
@@ -57,15 +59,17 @@ hr {
 
 .item-body {
   display: flex;
+  margin: 0;
   max-height: 0;
-  width: 100%;
+  width: 99%;
   object-fit: contain;
-  transition: max-height 0.7s ease-in-out;
+  transition: max-height 0.7s ease-in-out, margin 0.7s;
 }
 
 .item-input:checked ~ .item-body {
+  margin: 0.3em;
   max-height: 20em;
-  transition: max-height 0.7s ease-in-out;
+  transition: max-height 0.7s ease-in-out, margin 0.7s;
 }
 
 .plus {
@@ -120,8 +124,9 @@ hr {
   }
 
   .container:hover .item-body{
+    margin: 0.3em;
     max-height: 20em;
-    transition: max-height 0.7s ease-in-out;
+    transition: max-height 0.7s ease-in-out, margin 0.7s;
   }
 
   .container:hover .plus {
