@@ -81,8 +81,8 @@ hr {
 }
 
 .plus {
-  width: 0.7em;
-  height: 0.7em;
+  width: calc(0.4em + 0.8vw);
+  height: calc(0.4em + 0.8vw);
   margin: calc(0.2em + 0.2vw);
   transition: transform 0.5s ease-in-out;
 }
@@ -136,7 +136,7 @@ hr {
     color: black;
   }
 
-  .container:hover .item-body{
+  .container:hover .item-body {
     margin: 0.3em;
     max-height: 20em;
     opacity: 1;
@@ -157,5 +157,9 @@ hr {
 
   .container:active .plus {
     fill: rgb(0, 150, 207);
+  }
+
+  .container:active {
+    opacity: 0.7;
   }
 }
